@@ -1,0 +1,10 @@
+.new-poly-container {
+	display: flex;
+	justify-content: center;
+	margin: 12px;
+}
+
+.new-poly {
+	outline: none;
+	text-align: center;
+}

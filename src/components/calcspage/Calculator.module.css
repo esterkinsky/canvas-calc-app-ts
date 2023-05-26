@@ -1,0 +1,60 @@
+.calcgrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 300px;
+	grid-template-areas:
+		"c c ci"
+		"pc pc pciup"
+		"up up ."
+}
+
+.c {
+	display: grid;
+	grid-area: c;
+}
+
+.pc {
+	display: grid;
+	grid-area: pc;
+}
+
+.pciup {
+	display: grid;
+	grid-area: pciup;
+}
+
+.dropbtnci, .dropbtnpci {
+	justify-content: center;
+	padding: 10px;
+	cursor: pointer;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 14px;
+	transition: all 0.2s;
+	color: var(--gray-dark);
+}
+
+.dropdowncontentci, .dropdowncontentpci {
+	display: none;
+	min-width: 160px;
+	z-index: 1;
+}
+
+.dropdowncontentci a, .dropdowncontentpci a {
+	color: var(--gray-dark);
+	display: block;
+	text-align: center;
+}
+
+.ci:hover .dropdowncontentci {
+	display: block;
+}
+
+.pci:hover .dropdowncontentpci {
+	display: block;
+}
+
+.up {
+	justify-content: center;
+	display: grid;
+	grid-area: up;
+}

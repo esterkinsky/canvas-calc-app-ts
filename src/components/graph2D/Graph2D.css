@@ -1,0 +1,78 @@
+.funcsMenu {
+	position: absolute;
+	flex-direction: column;
+	display: flex;
+	align-items: center;
+	background-color: none;
+	width: 27%;
+	height: 500px;
+	scrollbar-gutter: stable;
+	top: 0;
+	left: 0;
+	transition: 0.2s;
+	margin-top: 80px;
+	overflow: hidden;
+}
+
+.funcsListBtn {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--gray-light);
+	width: 30px;
+	height: 30px;
+	scrollbar-gutter: stable;
+	top: 0;
+	left: 0;
+	transition: 0.4s;
+	margin-top: 50px;
+}
+
+.addFunction {
+	box-sizing: border-box;
+		cursor: pointer;
+		text-align: center;
+		border-radius: 5px;
+		color: var(--black);
+		background: none;
+		border: 1px solid var(--gray);
+}
+
+.addFunction:hover {
+	color: var(--white);
+	background-color: var(--primary);
+}
+
+.switchBtn {
+	display: inline-block;
+	width: 30px;
+	height: 15px;
+	border-radius: 19px;
+	background: var(--gray-dark);
+	z-index: 0;
+	margin: 0;
+	cursor: pointer;
+	position: relative;
+	transition-duration: 300ms;
+}
+
+.switchBtn::after {
+	content: "";
+	height: 15px;
+	width: 15px;
+	border-radius: 16px;
+	background: var(--white);
+	left: 0;
+	transition-duration: 300ms;
+	position: absolute;
+	z-index: 1;
+}
+
+.switchOn {
+	background: var(--primary);
+}
+
+.switchOn::after {
+	left: 15px;
+}

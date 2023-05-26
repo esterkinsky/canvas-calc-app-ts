@@ -1,0 +1,27 @@
+.menu {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+}
+
+.menuitem {
+	justify-content: center;
+	box-sizing: border-box;
+	padding: 10px;
+	cursor: pointer;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 14px;
+	transition: all 0.2s;
+	color: var(--white);
+	background-color: var(--primary);
+	border: 1px solid var(--gray-light)
+}
+
+.menuitem:hover {
+	background-color: var(--primary-hover);
+	transition: 0.2s;
+}

@@ -1,0 +1,18 @@
+.poly-operands-block {
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	justify-content: center;
+}
+
+.buttons-calc {
+	display: grid;
+	border-bottom: 1px solid var(--gray);
+	border-left: 1px solid var(--gray);
+	grid-template-columns: 1fr 1fr 1fr;
+	border-radius: 5px;
+}
+
+.buttons-calc>div {
+	text-align: center;
+}

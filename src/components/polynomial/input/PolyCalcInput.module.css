@@ -1,0 +1,13 @@
+.poly-calc-input {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin: 12px;
+}
+
+.poly-calc-input>textarea {
+	text-align: center;
+	height: 50px;
+	margin: 10px;
+	outline: none;
+}
