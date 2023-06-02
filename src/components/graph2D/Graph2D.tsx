@@ -19,12 +19,13 @@ const Graph2D: React.FC = () => {
 	let mousePosX = 0;
 
 	const canvas: any = useRef(null);
+	const canvasElem: any = useRef(null);
 	const graph2D: any = useRef(null);
 	const Canvas: any = useCanvas(() => renderGraph());
 
 	useEffect(() => {
 		canvas.current = Canvas({
-			id: 'graph',
+			elem: canvasElem.current,
 			WIN: WIN,
 			width: width,
 			height: height,
@@ -127,7 +128,7 @@ const Graph2D: React.FC = () => {
 				funcsList={funcs}
 				delFunc={delFunction}
 			/>
-			<canvas id="graph"></canvas>
+			<canvas id="graph" ref={canvasElem}></canvas>
 		</>
 	)
 }

@@ -2,7 +2,7 @@ export default class Graph2DFuncs {
 	constructor(WIN, canvas) {
 		this.WIN = WIN;
 		this.canvas = canvas;
-	} 
+	}
 
 	getDerivative = (f, x0, dx = 0.00001) => {
 		return (f(x0 + dx) - f(x0)) / dx;
@@ -19,17 +19,17 @@ export default class Graph2DFuncs {
 		this.canvas.line(x1, y1, x2, y2, 1, '#7417b3', true);
 	}
 
-	 printOXY () {
-		 this.canvas.line(0, this.WIN.BOTTOM, 0, this.WIN.HEIGHT + this.WIN.BOTTOM, 2, '#787d85')
-		 this.canvas.line(this.WIN.LEFT, 0, this.WIN.WIDTH + this.WIN.LEFT, 0, 2, '#787d85')
+	printOXY() {
+		this.canvas.line(0, this.WIN.BOTTOM, 0, this.WIN.HEIGHT + this.WIN.BOTTOM, 2, '#787d85')
+		this.canvas.line(this.WIN.LEFT, 0, this.WIN.WIDTH + this.WIN.LEFT, 0, 2, '#787d85')
 
-		 this.canvas.line(this.WIN.WIDTH + this.WIN.LEFT, 0, this.WIN.WIDTH + this.WIN.LEFT - 0.6, 0.20, 2, '#787d85');
-		 this.canvas.line(this.WIN.WIDTH + this.WIN.LEFT, 0, this.WIN.WIDTH + this.WIN.LEFT - 0.6, - 0.20, 2, '#787d85')
-		 this.canvas.line(0, this.WIN.HEIGHT + this.WIN.BOTTOM, - 0.20, this.WIN.HEIGHT + this.WIN.BOTTOM - 0.6, 2, '#787d85')
-		 this.canvas.line(0, this.WIN.HEIGHT + this.WIN.BOTTOM, 0.20, this.WIN.HEIGHT + this.WIN.BOTTOM - 0.6, 2, '#787d85')
+		this.canvas.line(this.WIN.WIDTH + this.WIN.LEFT, 0, this.WIN.WIDTH + this.WIN.LEFT - 0.6, 0.20, 2, '#787d85');
+		this.canvas.line(this.WIN.WIDTH + this.WIN.LEFT, 0, this.WIN.WIDTH + this.WIN.LEFT - 0.6, - 0.20, 2, '#787d85')
+		this.canvas.line(0, this.WIN.HEIGHT + this.WIN.BOTTOM, - 0.20, this.WIN.HEIGHT + this.WIN.BOTTOM - 0.6, 2, '#787d85')
+		this.canvas.line(0, this.WIN.HEIGHT + this.WIN.BOTTOM, 0.20, this.WIN.HEIGHT + this.WIN.BOTTOM - 0.6, 2, '#787d85')
 	}
 
-	grid () {
+	grid() {
 		for (var i = 0; i < this.WIN.HEIGHT + this.WIN.BOTTOM; i++) {
 			this.canvas.line(this.WIN.LEFT, i, this.WIN.WIDTH + this.WIN.LEFT, i, 1, '#d7d7d7')
 			this.canvas.line(0.1, i, -0.1, i, '#A4A4A4')

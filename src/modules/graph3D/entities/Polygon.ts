@@ -1,6 +1,14 @@
-import Point from './Point';
+import  Point  from './Point';
 
 export default class Polygon {
+	points: Point[];
+	color: { r: number, g: number, b: number };
+	distance: number;
+	lumen: number;
+	R: number;
+	figureIndex: number;
+	normVector: number;
+	center: Point;
 	constructor(points = [], color = '#ebebeb') {
 		this.points = points;
 		this.center = new Point();
@@ -12,7 +20,7 @@ export default class Polygon {
 		this.normVector = 0;
 	}
 
-	hexToRgb(hex) {
+	hexToRgb(hex: string): { r: number, g: number, b: number } {
 		const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
 		return result ? {
 			r: parseInt(result[1], 16),
@@ -20,7 +28,7 @@ export default class Polygon {
 			b: parseInt(result[3], 16)
 		} : { r: 0, g: 0, b: 0 };
 	}
-	rgbToColor(r, g, b) {
+	rgbToColor(r: number, g: number, b: number): string {
 		return `rgb(${r}, ${g}, ${b})`;
 	}
 }

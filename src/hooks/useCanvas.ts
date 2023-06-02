@@ -1,12 +1,17 @@
 import Canvas from '../modules/graph2D/Canvas';
 
-export default function useCanvas(render = () => { }) {
+export default function useCanvas(render = (FPS: number) => { }) {
 	window.requestAnimFrame = (function () {
 		return window.requestAnimationFrame ||
+			// @ts-ignore
 			window.webkitRequestAnimationFrame ||
+			// @ts-ignore
 			window.mozRequestAnimationFrame ||
+			// @ts-ignore
 			window.oRequestAnimationFrame ||
-			window.msRequestAnimationFrame ||
+			// @ts-ignore
+			window.msRequestAnimationFrame ||git add .
+			// @ts-ignore
 			function (callback) {
 				window.setTimeout(callback, 15);
 			}

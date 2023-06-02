@@ -1,7 +1,8 @@
 import { Point, Edge, Polygon, FigureBody } from '../index'
 
 export default class Cone extends FigureBody {
-	constructor(count = 20, crcs = 10, rad = 10, color) {
+	constructor(count = 20, crcs = 10, rad = 10, color: string) {
+		this.count = count;
 		const points = [];
 		const edges = [];
 		const polygons = [];
@@ -30,8 +31,8 @@ export default class Cone extends FigureBody {
 				edges.push(new Edge(i, i + count));
 			}
 		}
-		
-		for (let i = 0; i < points.length; i++) {
+
+		for (let i: number = 0; i < points.length; i++) {
 			if ((i + 1 + count) < points.length && ((i + 1) % count) !== 0) {
 				polygons.push(new Polygon([i, i + 1, i + 1 + count, i + count], color));
 			} else if ((i + count) < points.length && ((i + 1) % count) === 0) {
